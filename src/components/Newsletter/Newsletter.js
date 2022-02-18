@@ -19,7 +19,6 @@ const Newsletter = () => {
                     type="button"
                     size="small"
                     variant="outlined"
-                    color="transparent"
                 >
                     SIGN UP
                 </Button>

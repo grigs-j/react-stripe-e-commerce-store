@@ -74,7 +74,7 @@ function App() {
         fetchCart();
     }, []);
 
-    // console.log(cart.total_items);
+    // console.log(cart);
 
     return (
         <Router>

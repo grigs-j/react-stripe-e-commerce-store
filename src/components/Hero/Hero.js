@@ -9,16 +9,19 @@ const Hero = () => {
             <Grid item className={classes.imageContainer} />
             <div className={classes.card}>
                 <Typography variant="h4" className={classes.heroText}>
-                    Buy Buystuff stuff!
+                    Best of 2021
+                </Typography>
+                <Typography variant="h6" className={classes.heroText}>
+                    Explore the best new books for all ages!
                 </Typography>
                 <Button
                     className={classes.ctaButton}
                     size="large"
                     type="button"
                     variant="contained"
-                    color="white"
+                    color="primary"
                 >
-                    BUY NOW
+                    Let's Go
                 </Button>
             </div>
         </Grid>

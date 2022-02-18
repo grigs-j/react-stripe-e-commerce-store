@@ -24,6 +24,7 @@ export default makeStyles((theme) => ({
         display: "flex",
         textDecoration: "none",
         marginRight: ".25rem",
+        color: "red",
     },
     image: {
         display: "none",

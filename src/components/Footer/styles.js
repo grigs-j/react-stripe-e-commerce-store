@@ -11,6 +11,8 @@ export default makeStyles((theme) => ({
         justifyContent: "center",
         [theme.breakpoints.up("sm")]: {
             flexDirection: "row",
+            alignItems: "flex-start",
+            justifyContent: "space-evenly",
         },
     },
     bottomGrid: {
@@ -48,5 +50,8 @@ export default makeStyles((theme) => ({
         flexDirection: "column",
         cursor: "pointer",
         marginBottom: "1rem",
+    },
+    footerTitle: {
+        color: "red",
     },
 }));
