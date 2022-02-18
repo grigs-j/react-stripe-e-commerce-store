@@ -1,18 +1,27 @@
+import { Typography, Button, Grid } from "@material-ui/core";
 import React from "react";
 import useStyles from "./styles";
 
 const Hero = () => {
     const classes = useStyles();
     return (
-        <div className={classes.container}>
-            <div className={classes.wrapper}>
-                <img
-                    className={classes.bgImage}
-                    src="https://images.unsplash.com/photo-1551803091-e20673f15770?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1335&q=80"
-                    height="90vh"
-                />
+        <Grid container className={classes.container}>
+            <Grid item className={classes.imageContainer} />
+            <div className={classes.card}>
+                <Typography variant="h4" className={classes.heroText}>
+                    Buy Buystuff stuff!
+                </Typography>
+                <Button
+                    className={classes.ctaButton}
+                    size="large"
+                    type="button"
+                    variant="contained"
+                    color="white"
+                >
+                    BUY NOW
+                </Button>
             </div>
-        </div>
+        </Grid>
     );
 };
 

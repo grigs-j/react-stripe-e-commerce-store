@@ -1,0 +1,16 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+}

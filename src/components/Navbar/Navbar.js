@@ -6,7 +6,7 @@ import {
     Badge,
     Typography,
 } from "@material-ui/core";
-import { HelpOutlined, ShoppingCart } from "@material-ui/icons";
+import { HelpOutlined, MenuRounded, ShoppingCart } from "@material-ui/icons";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "../../assets/codedog-single.svg";
 
@@ -34,7 +34,8 @@ const Navbar = ({ totalItems }) => {
                         Best Sellers / Shop Now
                     </Typography>
                 </Toolbar>
-                <Toolbar>
+                <Toolbar className={classes.navbar}>
+                    <MenuRounded className={classes.menuToggle} />
                     <Typography
                         variant="h5"
                         color="inherit"

@@ -65,7 +65,12 @@ const Cart = ({ cart, onRemoveFromCart, onEmptyCart, onUpdateCartQty }) => {
     return (
         <Container>
             <div className={classes.toolbar} />
-            <Typography className={classes.title} variant="h2" gutterBottom>
+            <Typography
+                align="center"
+                className={classes.title}
+                variant="h4"
+                gutterBottom
+            >
                 Your Shopping Cart
             </Typography>
             {!cart.line_items.length ? <EmptyCart /> : <FilledCart />}

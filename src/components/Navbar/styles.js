@@ -10,6 +10,15 @@ export default makeStyles((theme) => ({
             display: "flex",
         },
     },
+    navbar: {
+        paddingTop: ".5rem",
+    },
+    menuToggle: {
+        marginRight: "1rem",
+        [theme.breakpoints.up("sm")]: {
+            display: "none",
+        },
+    },
     title: {
         alignItems: "center",
         display: "flex",
@@ -17,6 +26,10 @@ export default makeStyles((theme) => ({
         marginRight: ".25rem",
     },
     image: {
+        display: "none",
+        [theme.breakpoints.up("sm")]: {
+            display: "flex",
+        },
         marginRight: "3rem",
     },
     navbarLink: {
@@ -24,23 +37,27 @@ export default makeStyles((theme) => ({
         marginRight: "1rem",
     },
     navbarLinks: {
-        display: "flex",
+        display: "none",
+        [theme.breakpoints.up("sm")]: {
+            display: "flex",
+        },
     },
     announcement: {
-        backgroundColor: "steelblue",
-        color: "white",
-        textAlign: "center",
-        minHeight: "2rem",
-        justifyContent: "center",
+        display: "none",
+        [theme.breakpoints.up("sm")]: {
+            display: "flex",
+            backgroundColor: "steelblue",
+            color: "white",
+            textAlign: "center",
+            minHeight: "2rem",
+            justifyContent: "center",
+        },
     },
     menuButton: {
         marginRight: theme.spacing(2),
         [theme.breakpoints.up("sm")]: {
             display: "none",
         },
-    },
-    navbarMiddle: {
-        justifyContent: "center",
     },
     grow: {
         flexGrow: 1,

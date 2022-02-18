@@ -8,10 +8,12 @@ import {
     Divider,
     Button,
     Typography,
+    CssBaseline,
 } from "@material-ui/core";
 import AddressForm from "../CheckoutForm/AddressForm";
 import PaymentForm from "../CheckoutForm/PaymentForm";
 import { commerce } from "../../lib/commerce";
+import { Link, useNavigate } from "react-router-dom";
 import useStyles from "./styles";
 
 const steps = ["Shipping address", "Payment details"];
@@ -22,6 +24,7 @@ const Checkout = ({ cart, order, error, onCaptureCheckout }) => {
     const [activeStep, setActiveStep] = useState(0);
     const [checkoutToken, setCheckoutToken] = useState(null);
     const [shippingData, setShippingData] = useState({});
+    const navigate = useNavigate();
 
     useEffect(() => {
         const generateToken = async () => {
@@ -32,7 +35,9 @@ const Checkout = ({ cart, order, error, onCaptureCheckout }) => {
 
                 // console.log(token);
                 setCheckoutToken(token);
-            } catch (error) {}
+            } catch (error) {
+                navigate("/");
+            }
         };
 
         generateToken();
@@ -65,6 +70,7 @@ const Checkout = ({ cart, order, error, onCaptureCheckout }) => {
 
     return (
         <>
+            <CssBaseline />
             <div className={classes.toolbar} />
             <main className={classes.layout}>
                 <Paper className={classes.paper}>

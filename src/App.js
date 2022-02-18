@@ -10,6 +10,7 @@ import {
     Newsletter,
 } from "./components";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./components/globalstyles.css";
 
 function App() {
     const [products, setProducts] = useState([]);
@@ -79,6 +80,7 @@ function App() {
         <Router>
             <div>
                 <Navbar totalItems={cart.total_items} />
+
                 <Routes>
                     <Route
                         exact
@@ -98,12 +100,15 @@ function App() {
                     <Route
                         path="/cart"
                         element={
-                            <Cart
-                                cart={cart}
-                                onUpdateCartQty={handleUpdateCartQty}
-                                onEmptyCart={handleEmptyCart}
-                                onRemoveFromCart={handleRemoveFromCart}
-                            />
+                            <>
+                                <Cart
+                                    cart={cart}
+                                    onUpdateCartQty={handleUpdateCartQty}
+                                    onEmptyCart={handleEmptyCart}
+                                    onRemoveFromCart={handleRemoveFromCart}
+                                />
+                                <Footer />
+                            </>
                         }
                     />
                     <Route
