@@ -17,7 +17,7 @@ const PaymentForm = ({
     onCaptureCheckout,
     nextStep,
 }) => {
-    const handleSubmit = async ({ e, elements, stripe }) => {
+    const handleSubmit = async (e, elements, stripe) => {
         e.preventDefault();
 
         if (!stripe || !elements) return;
@@ -34,17 +34,17 @@ const PaymentForm = ({
             const orderData = {
                 line_items: checkoutToken.live.line_items,
                 customer: {
-                    firstname: shippingData.fistName,
+                    firstname: shippingData.firstName,
                     lastname: shippingData.lastName,
                     email: shippingData.email,
                 },
                 shipping: {
                     name: "Primary",
-                    street: shippingData.adress1,
+                    street: shippingData.address1,
                     town_city: shippingData.city,
                     county_state: shippingData.shippingSubdivision,
                     postal_zip_code: shippingData.zip,
-                    coutry: shippingData.shippingCountry,
+                    country: shippingData.shippingCountry,
                 },
                 fulfillment: {
                     shipping_method: shippingData.shippingOption,
@@ -59,6 +59,7 @@ const PaymentForm = ({
             onCaptureCheckout(checkoutToken.id, orderData);
 
             nextStep();
+            console.log(orderData);
         }
     };
 

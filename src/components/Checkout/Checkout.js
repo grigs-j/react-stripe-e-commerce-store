@@ -33,7 +33,7 @@ const Checkout = ({ cart, order, error, onCaptureCheckout }) => {
                     type: "cart",
                 });
 
-                // console.log(token);
+                console.log(cart.id);
                 setCheckoutToken(token);
             } catch (error) {
                 navigate("/");
@@ -53,11 +53,43 @@ const Checkout = ({ cart, order, error, onCaptureCheckout }) => {
         nextStep();
     };
 
-    const Confirmation = () => <div>Confirmation</div>;
+    const Confirmation = () =>
+        order.customer ? (
+            <>
+                <div>
+                    <Typography variant="h5">
+                        Thank you for your purchase, {order.customer.firstname}{" "}
+                        {order.customer.lastname}!
+                    </Typography>
+                    <Divider className={classes.divider} />
+                    <Typography variant="subtitle2">
+                        Order ref: {order.customer_reference}
+                    </Typography>
+                </div>
+                <br />
+                <Button
+                    component={Link}
+                    variant="outlined"
+                    type="button"
+                    to="/"
+                >
+                    Back to home
+                </Button>
+            </>
+        ) : (
+            <div className={classes.spinner}>
+                <CircularProgress />
+            </div>
+        );
 
     const Form = () =>
         activeStep === 0 ? (
-            <AddressForm checkoutToken={checkoutToken} next={next} />
+            <AddressForm
+                checkoutToken={checkoutToken}
+                next={next}
+                nextStep={nextStep}
+                setShippingData={setShippingData}
+            />
         ) : (
             <PaymentForm
                 shippingData={shippingData}
@@ -77,7 +109,10 @@ const Checkout = ({ cart, order, error, onCaptureCheckout }) => {
                     <Typography variant="h4" align="center">
                         Checkout
                     </Typography>
-                    <Stepper activeStep={0} className={classes.stepper}>
+                    <Stepper
+                        activeStep={activeStep}
+                        className={classes.stepper}
+                    >
                         {steps.map((step) => (
                             <Step key={step}>
                                 <StepLabel>{step}</StepLabel>

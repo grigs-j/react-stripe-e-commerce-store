@@ -38,4 +38,8 @@ export default makeStyles((theme) => ({
     grow: {
         flexGrow: 1,
     },
+    desktopLink: {
+        color: "black",
+        marginRight: ".75rem",
+    },
 }));

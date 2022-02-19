@@ -15,11 +15,14 @@ body {
     padding: 0;
 }
 .MuiDrawer-paper {
-    width: 50% !important;
+    width: 60% !important;
 }
 .MuiListItem-root {
     justify-content: center !important;
 }
 .makeStyles-drawerHeader-40 {
+    justify-content: center !important;
+}
+.makeStyles-drawerHeader-74 {
     justify-content: center !important;
 }

@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 export default makeStyles(() => ({
     container: {
         position: "relative",
+        height: "100vh",
     },
     card: {
         position: "absolute",
@@ -37,8 +38,5 @@ export default makeStyles(() => ({
         backgroundPosition: "center",
         width: "100%",
         paddingTop: "70px",
-    },
-    container: {
-        height: "100vh",
     },
 }));

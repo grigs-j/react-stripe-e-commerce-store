@@ -5,7 +5,6 @@ import {
     IconButton,
     Badge,
     Typography,
-    Button,
     Hidden,
     SwipeableDrawer,
     ListItem,
@@ -49,9 +48,18 @@ const Navbar = ({ totalItems }) => {
                 </Toolbar>
                 <Toolbar className={classes.navbar}>
                     <Hidden xsDown>
-                        <Link to="/">home</Link>
-                        <Link to="/">home</Link>
-                        <Link to="/">home</Link>
+                        <Link className={classes.desktopLink} to="/">
+                            Home
+                        </Link>
+                        <Link className={classes.desktopLink} to="/">
+                            Children's
+                        </Link>
+                        <Link className={classes.desktopLink} to="/">
+                            Young Adult
+                        </Link>
+                        <Link className={classes.desktopLink} to="/">
+                            Best Sellers
+                        </Link>
                     </Hidden>
                     <Hidden smUp>
                         <IconButton>

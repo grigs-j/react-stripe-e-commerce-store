@@ -74,8 +74,8 @@ function App() {
         fetchCart();
     }, []);
 
-    console.log(cart);
-    console.log(products);
+    // console.log(cart);
+    // console.log(products);
 
     return (
         <Router>
