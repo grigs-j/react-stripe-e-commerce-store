@@ -26,4 +26,19 @@ export default makeStyles((theme) => ({
         width: "100%",
         justifyContent: "space-between",
     },
+    grow: {
+        height: "40vh",
+    },
+    noCart: {
+        margin: "4rem 0 2rem",
+    },
+    btnContainer: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        marginBottom: "4rem",
+    },
+    noCartButton: {
+        margin: "0 1.5rem",
+    },
 }));

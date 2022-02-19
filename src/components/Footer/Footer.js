@@ -9,12 +9,6 @@ const Footer = () => {
         <>
             <Grid container className={classes.topGrid}>
                 <div className={classes.imgContainer}>
-                    <img
-                        src={Logo}
-                        height="200px"
-                        className={classes.img}
-                        alt=""
-                    />
                     <Typography
                         className={classes.footerTitle}
                         variant="h4"
@@ -22,6 +16,12 @@ const Footer = () => {
                     >
                         LET'S READ
                     </Typography>
+                    <img
+                        src={Logo}
+                        height="200px"
+                        className={classes.img}
+                        alt=""
+                    />
                 </div>
                 <div>
                     <Typography className={classes.linkTitle} variant="h6">

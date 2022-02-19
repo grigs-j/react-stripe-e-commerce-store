@@ -9,7 +9,7 @@ const Hero = () => {
             <Grid item className={classes.imageContainer} />
             <div className={classes.card}>
                 <Typography variant="h4" className={classes.heroText}>
-                    Best of 2021
+                    Best Books of 2021
                 </Typography>
                 <Typography variant="h6" className={classes.heroText}>
                     Explore the best new books for all ages!

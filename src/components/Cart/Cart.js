@@ -8,12 +8,43 @@ const Cart = ({ cart, onRemoveFromCart, onEmptyCart, onUpdateCartQty }) => {
     const classes = useStyles();
 
     const EmptyCart = () => (
-        <Typography variant="subtitle1">
-            No items in cart,
-            <Link to="/" className={classes.link}>
-                let's add some!
-            </Link>
-        </Typography>
+        <>
+            <Typography
+                align="center"
+                variant="subtitle1"
+                className={classes.noCart}
+            >
+                No items in cart,{" "}
+                <Link to="/" className={classes.link}>
+                    let's add some!
+                </Link>
+            </Typography>
+            <div className={classes.btnContainer}>
+                <Button
+                    className={classes.noCartButton}
+                    component={Link}
+                    to="/"
+                    size="large"
+                    type="button"
+                    variant="contained"
+                    color="secondary"
+                >
+                    Children's
+                </Button>
+                <Button
+                    className={classes.noCartButton}
+                    component={Link}
+                    to="/"
+                    size="large"
+                    type="button"
+                    variant="contained"
+                    color="primary"
+                >
+                    Young Adult
+                </Button>
+                <div className={classes.grow}></div>
+            </div>
+        </>
     );
 
     const FilledCart = () => (

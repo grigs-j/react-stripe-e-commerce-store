@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import {
     AppBar,
     Toolbar,
     IconButton,
     Badge,
     Typography,
+    Button,
+    Hidden,
+    SwipeableDrawer,
+    ListItem,
+    List,
+    Divider,
 } from "@material-ui/core";
-import { HelpOutlined, MenuRounded, ShoppingCart } from "@material-ui/icons";
+import {
+    HelpOutlined,
+    MenuRounded,
+    ShoppingCart,
+    ChevronLeft,
+} from "@material-ui/icons";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "../../assets/letsreadlogo.svg";
 
@@ -15,6 +26,8 @@ import useStyles from "./styles";
 const Navbar = ({ totalItems }) => {
     const classes = useStyles();
     const location = useLocation();
+
+    const [open, setOpen] = useState(false);
 
     return (
         <>
@@ -35,59 +48,29 @@ const Navbar = ({ totalItems }) => {
                     </Typography>
                 </Toolbar>
                 <Toolbar className={classes.navbar}>
-                    <MenuRounded className={classes.menuToggle} />
-                    <Typography
-                        variant="h5"
-                        color="inherit"
-                        className={classes.title}
-                        component={Link}
-                        to="/"
-                    >
-                        LET'S READ
-                    </Typography>
-                    <Typography
-                        variant="h6"
-                        color="inherit"
-                        component={Link}
-                        to="/"
-                    >
-                        <img
-                            src={Logo}
-                            alt=""
-                            height="50px"
-                            className={classes.image}
-                        />
-                    </Typography>
-                    <div className={classes.navbarLinks}>
-                        <Typography
-                            color="inherit"
-                            className={classes.navbarLink}
-                            component={Link}
-                            to="/"
-                        >
-                            Childrens
-                        </Typography>
-                        <Typography
-                            color="inherit"
-                            className={classes.navbarLink}
-                            component={Link}
-                            to="/"
-                        >
-                            Young Adult
-                        </Typography>
-                        <Typography
-                            color="inherit"
-                            className={classes.navbarLink}
-                            component={Link}
-                            to="/"
-                        >
-                            Our Story
-                        </Typography>
+                    <Hidden xsDown>
+                        <Link to="/">home</Link>
+                        <Link to="/">home</Link>
+                        <Link to="/">home</Link>
+                    </Hidden>
+                    <Hidden smUp>
+                        <IconButton>
+                            <MenuRounded onClick={() => setOpen(true)} />
+                        </IconButton>
+                    </Hidden>
+                    <div className={classes.grow}>
+                        <div className={classes.logoNav}>
+                            <img
+                                src={Logo}
+                                alt=""
+                                height="50px"
+                                className={classes.image}
+                            />
+                            <Typography variant="h5">LET'S READ</Typography>
+                        </div>
                     </div>
-                    <div className={classes.grow} />
-
                     {location.pathname === "/" && (
-                        <div className={classes.button}>
+                        <div className={classes.navBtnContainer}>
                             <IconButton>
                                 <HelpOutlined />
                             </IconButton>
@@ -106,6 +89,78 @@ const Navbar = ({ totalItems }) => {
                         </div>
                     )}
                 </Toolbar>
+
+                <SwipeableDrawer
+                    open={open}
+                    onOpen={() => setOpen(true)}
+                    onClose={() => setOpen(false)}
+                    anchor="left"
+                >
+                    <div className={classes.drawerHeader}>
+                        <img
+                            src={Logo}
+                            alt=""
+                            height="50px"
+                            className={classes.image}
+                        />
+                        <IconButton>
+                            <ChevronLeft onClick={() => setOpen(false)} />
+                        </IconButton>
+                    </div>
+                    <Divider />
+                    <List>
+                        <ListItem>
+                            <Typography
+                                color="inherit"
+                                className={classes.navbarLink}
+                                component={Link}
+                                to="/"
+                            >
+                                Home
+                            </Typography>
+                        </ListItem>
+                        <ListItem>
+                            <Typography
+                                color="inherit"
+                                className={classes.navbarLink}
+                                component={Link}
+                                to="/"
+                            >
+                                Children's
+                            </Typography>
+                        </ListItem>
+                        <ListItem>
+                            <Typography
+                                color="inherit"
+                                className={classes.navbarLink}
+                                component={Link}
+                                to="/"
+                            >
+                                Young Adult
+                            </Typography>
+                        </ListItem>
+                        <ListItem>
+                            <Typography
+                                color="inherit"
+                                className={classes.navbarLink}
+                                component={Link}
+                                to="/"
+                            >
+                                Best Sellers
+                            </Typography>
+                        </ListItem>
+                        <ListItem>
+                            <Typography
+                                color="inherit"
+                                className={classes.navbarLink}
+                                component={Link}
+                                to="/"
+                            >
+                                Our Story
+                            </Typography>
+                        </ListItem>
+                    </List>
+                </SwipeableDrawer>
             </AppBar>
         </>
     );
