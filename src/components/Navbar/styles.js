@@ -20,6 +20,7 @@ export default makeStyles((theme) => ({
     drawerHeader: {
         display: "flex",
         alignItems: "center",
+        justifyContent: "center",
     },
     announcement: {
         display: "flex",

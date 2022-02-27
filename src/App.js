@@ -23,10 +23,8 @@ function App() {
         const { data } = await commerce.products.list();
         setProducts(data);
     };
-    // console.log(data);
 
     const fetchCart = async () => {
-        //putting res in var is redundant, so we can set cart to the state
         setCart(await commerce.cart.retrieve());
     };
 
@@ -74,8 +72,14 @@ function App() {
         fetchCart();
     }, []);
 
-    // console.log(cart);
-    // console.log(products);
+    // const [filter, setFilter] = useState("");
+
+    // const handleFilter = async () => {
+    //     const { category } = await commerce.categories.retrieve("category", {
+    //         type: "slug",
+    //     });
+    //     setFilter(filtered);
+    // };
 
     return (
         <Router>

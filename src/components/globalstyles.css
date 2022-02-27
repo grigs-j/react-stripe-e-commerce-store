@@ -26,3 +26,13 @@ body {
 .makeStyles-drawerHeader-74 {
     justify-content: center !important;
 }
+p {
+    margin: 0;
+    margin-bottom: 0.25rem;
+}
+.MuiCardContent-root {
+    padding-bottom: 0 !important;
+}
+.select {
+    padding-top: 15rem;
+}
