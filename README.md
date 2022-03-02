@@ -51,7 +51,7 @@
 
 ## About The Project
 
-![project preview](url)
+![project preview](https://i.postimg.cc/6Q5VTJT4/letreadpreview.png)
 
 
 Projects include:
@@ -67,7 +67,7 @@ Projects include:
 -   [Node](https://nodejs.org/)
 -   [MaterialUI](https://mui.com/)
 -   [Stripe](https://stripe.com/)
--   [Styled](https://https://styled-components.com/.com/)
+-   [Styled](https://https://styled-components.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
