@@ -52,6 +52,7 @@
 ## About The Project
 
 ![project preview](https://i.postimg.cc/6Q5VTJT4/letreadpreview.png)
+![project preview](https://i.postimg.cc/gksnjwh4/letreadbook.png)
 
 
 Projects include:
