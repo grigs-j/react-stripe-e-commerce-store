@@ -4,6 +4,7 @@
 <div align="center">
   <a href="https://github.com/grigs-j/react-stripe-e-commerce-store>
     <img src="https://i.postimg.cc/VNVfMnsB/letsreadlogo.png" alt="Logo" width="80" height="80">
+                                                                                               [letsreadlogo.png](https://postimg.cc/PL1nnLwP)
   </a>
 
   <h3 align="center">Let's Read Bookstore Site</h3>
