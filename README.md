@@ -2,6 +2,9 @@
 
 <!-- PROJECT LOGO -->
 <div align="center">
+  <a href="https://github.com/grigs-j/jg-portfolio">
+    <img src="https://i.postimg.cc/KY2gJpg8/codedog-full.png" alt="Logo" width="80" height="80">
+  </a>
   <a href="https://github.com/grigs-j/react-stripe-e-commerce-store>
     <img src="https://i.postimg.cc/VNVfMnsB/letsreadlogo.png" alt="Logo" width="80" height="80">
   </a>
