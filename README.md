@@ -54,9 +54,6 @@
 ![project preview](https://i.postimg.cc/6Q5VTJT4/letreadpreview.png)
 ![project preview](https://i.postimg.cc/gksnjwh4/letreadbook.png)
 
-
-Projects include:
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Projects and Portfolio Built With
