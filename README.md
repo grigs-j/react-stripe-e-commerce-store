@@ -3,7 +3,7 @@
 <!-- PROJECT LOGO -->
 <div align="center">
   <a href="https://github.com/grigs-j/react-stripe-e-commerce-store>
-    <img src="https://i.postimg.cc/KY2gJpg8/codedog-full.png" alt="Logo" width="80" height="80">
+    <img src="https://i.postimg.cc/VNVfMnsB/letsreadlogo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Let's Read Bookstore Site</h3>
